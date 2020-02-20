@@ -6,9 +6,9 @@
 
 原始数据来自于[2019年12月中华人民共和国县以上行政区划代码](http://www.mca.gov.cn/article/sj/xzqh/2019/2019/202002191838.html)。获取方法：
 
-    w3m http://www.mca.gov.cn/article/sj/xzqh/2019/2019/202002191838.html >data/places.txt
+    curl -s http://www.mca.gov.cn/article/sj/xzqh/2019/2019/202002191838.html | html2text --ignore-tables >data/places.txt
 
-或者也可以用浏览器访问[该网页](http://www.mca.gov.cn/article/sj/xzqh/2019/2019/202002191838.html)，然后把文字内容复制粘贴到 `data/places.txt` 文件中。
+这里用到了 [html2text](http://alir3z4.github.io/html2text/) 工具。或者，也可以用浏览器访问[该网页](http://www.mca.gov.cn/article/sj/xzqh/2019/2019/202002191838.html)，然后把文字内容复制粘贴到 `data/places.txt` 文件中。
 
 ## 数据文件
 
