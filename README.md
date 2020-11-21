@@ -4,11 +4,11 @@
 
 ## 数据来源
 
-原始数据来自于[2020年5月中华人民共和国县以上行政区划代码](http://www.mca.gov.cn/article/sj/xzqh/2020/2020/2020072805001.html)。获取方法：
+原始数据来自于[中华人民共和国民政部-行政区划代码](http://www.mca.gov.cn/article/sj/xzqh/)。获取方法：
 
-    curl -s http://www.mca.gov.cn/article/sj/xzqh/2020/2020/2020072805001.html | html2text --ignore-tables >data/places.txt
+    xargs -n 1 curl -s <source-url.txt | html2text --ignore-tables >data/places.txt
 
-这里用到了 [html2text](http://alir3z4.github.io/html2text/) 工具。或者，也可以用浏览器访问[该网页](http://www.mca.gov.cn/article/sj/xzqh/2020/2020/2020072805001.html)，然后把文字内容复制粘贴到 `data/places.txt` 文件中。
+这里用到了 [html2text](http://alir3z4.github.io/html2text/) 工具。或者，也可以用浏览器访问[该网页](http://www.mca.gov.cn/article/sj/xzqh/)，访问最新的“县以上区划变更情况”网页，然后把文字内容复制粘贴到 `data/places.txt` 文件中。
 
 ## 数据文件
 
